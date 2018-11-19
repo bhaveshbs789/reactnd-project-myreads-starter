@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 
 class Book extends Component {
 	render() {
-		return (
-			<li>
+        console.log('Props from BookShelf', this.props);
+		return (            
+			  <li>
 	            <div className="book">
 	              <div className="book-top">
-	                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: 'url(' + this.props.bookStatus.imageLinks.thumbnail + ')' }}></div>
+	                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: "url(" + this.props.bookStatus.imageLinks.thumbnail + ")" }}></div>
 	                <div className="book-shelf-changer">
 	                  <select>
 	                    <option value="move" disabled>Move to...</option>
@@ -17,8 +18,8 @@ class Book extends Component {
 	                  </select>
 	                </div>
 	              </div>
-	              <div className="book-title">1776</div>
-	              <div className="book-authors">David McCullough</div>
+	              <div className="book-title">{this.props.bookStatus.title}</div>
+	              <div className="book-authors">{this.props.bookStatus.authors[0]}</div>
 	            </div>
 	          </li>
 		)
