@@ -12,13 +12,13 @@ class ListBooks extends Component {
             <div className="list-books-content">
               <div>
                 <Shelf section="Currently Reading"
-                // books={this.props.booksOnShelf.filter((book) => book.shelf === "currentlyReading")}
+                books={this.props.booksOnShelf.filter((book) => book.shelf === "currentlyReading")}
                 />                
                 <Shelf section="Want to Read"
-                // books={this.props.booksOnShelf.filter((book) => book.shelf === "wantToRead")}
+                books={this.props.booksOnShelf.filter((book) => book.shelf === "wantToRead")}
                 />                
                 <Shelf section="Read"
-                // books={this.props.booksOnShelf.filter((book) => book.shelf === "read")}
+                books={this.props.booksOnShelf.filter((book) => book.shelf === "read")}
                 />                
               </div>
             </div>
