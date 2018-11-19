@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 class Book extends Component {
 	render() {
-        console.log('Props from BookShelf', this.props);
+        console.log('Props from Shelf', this.props);
 		return (            
-		  <li>
+			  <li>
 	            <div className="book">
 	              <div className="book-top">
 	                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: "url(" + this.props.bookStatus.imageLinks.thumbnail + ")" }}></div>
 	                <div className="book-shelf-changer">
-	                  <select>
+	                  <select value={this.props.bookStatus.shelf} onChange={(evt => this.props.changeShelf(this.props.bookStatus, evt.target.value))}>
 	                    <option value="move" disabled>Move to...</option>
 	                    <option value="currentlyReading">Currently Reading</option>
 	                    <option value="wantToRead">Want to Read</option>
