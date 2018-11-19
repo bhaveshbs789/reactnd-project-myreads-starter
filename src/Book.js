@@ -4,7 +4,7 @@ class Book extends Component {
 	render() {
         console.log('Props from BookShelf', this.props);
 		return (            
-			  <li>
+		  <li>
 	            <div className="book">
 	              <div className="book-top">
 	                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: "url(" + this.props.bookStatus.imageLinks.thumbnail + ")" }}></div>
