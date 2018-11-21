@@ -10,9 +10,9 @@ class ListBooks extends Component {
         books : []
     };
 
-	render() {
-		return (
-		<div className="list-books">
+    render() {
+	return (
+	<div className="list-books">
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
@@ -33,7 +33,7 @@ class ListBooks extends Component {
               </div>
             </div>
             <div className="open-search">
-                <Link to='/search'>Add a book</Link>
+                <Link to='/search'>Add</Link>
             </div>
         </div>
 		)
