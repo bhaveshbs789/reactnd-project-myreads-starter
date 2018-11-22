@@ -66,7 +66,9 @@ class Search extends Component {
                     books = books.filter((book) => book.imageLinks).map(this.changeSearchBookShelf)                    
                     this.setState({booksSearched : books})
                     console.log(this.state.booksSearched)   
-                }
+                } else {
+		    this.setState({booksSearched : []})   
+		}
             })
        } else {
             this.setState({booksSearched : [], query : ''})
